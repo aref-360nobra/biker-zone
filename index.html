@@ -8,16 +8,45 @@
     <!-- tailwind and daisy ui cdn server start -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- tailwind and daisy ui cdn server end -->
+    <!-- google font poppins, inter, manrope start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- google font poppins, inter, manrope end -->
+    <link rel="shortcut icon" href="./images/carousel/bike1.png" type="image/x-icon">
+    <!-- custom tailwind start -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bike-primary': '#E76F51',
+                        'bike-secondary': '#E76F511A',
+                        'light-black': '#000000CC',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- custom tailwind end -->
+    <!-- vanilla css start -->
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+    <!-- vanilla css end -->
 </head>
 
 <body class="container, mx-auto">
-    <header>
+    <header class="md:container md:mx-auto">
         <nav>
             <!-- navigation with daisy ui start -->
             <div class="navbar bg-base-100">
-                <div class="navbar-start">
+                <div class="flex-1">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -27,31 +56,154 @@
                             </svg>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base">
                             <li><a>Home</a></li>
                             <li><a>Shop</a></li>
                             <li><a>News</a></li>
                             <li><a>Contact</a></li>
+                            <!-- theme switcher for all -->
+                            <div class="dropdown">
+                                <div tabindex="0" role="button" class="btn m-1">
+                                    Theme
+                                    <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                                        <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                                    </svg>
+                                </div>
+                                <ul tabindex="0"
+                                    class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
+                                    <li><input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Default" value="default" /></li>
+                                    <li><input type="radio" name="theme-dropdown"
+                                            class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                            aria-label="Light" value="light" /></li>
+                                </ul>
+                            </div>
+                            <!-- theme switcher end -->
+                            </li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">daisyUI</a>
+                    <a class="btn btn-ghost text-4xl">Biker Zone</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
+                    <ul class="menu menu-horizontal px-1 text-base">
                         <li><a>Home</a></li>
                         <li><a>Shop</a></li>
                         <li><a>News</a></li>
                         <li><a>Contact</a></li>
+                        <!-- theme switcher for all -->
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn m-1">
+                                Theme
+                                <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                                    <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                                </svg>
+                            </div>
+                            <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
+                                <li><input type="radio" name="theme-dropdown"
+                                        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                        aria-label="Default" value="default" /></li>
+                                <li><input type="radio" name="theme-dropdown"
+                                        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                        aria-label="Light" value="light" /></li>
+                            </ul>
+                        </div>
+                        <!-- theme switcher end -->
                     </ul>
                 </div>
-                <div class="navbar-end">
-                    <a class="btn btn-error">Login</a>
+                <div class="navbar-end w-auto">
+                    <a class="btn bg-bike-primary text-white">Login</a>
                 </div>
             </div>
             <!-- navigation with daisy ui end -->
         </nav>
+        <!-- slider or carousel start -->
+        <div class="carousel w-full lg:[550px] bg-bike-secondary h-[450px] rounded px-50">
+            <!-- carousel 1 -->
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="flex gap-20 flex-col lg:flex-row p-4">
+                    <div class="space-y-7 flex-1">
+                        <h2 class="text-6xl font-bold">
+                            Ride-on R15 V4
+                            <br>
+                            with Smile
+                        </h2>
+                        <p class="text-light-black">Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <button class="btn bg-bike-primary text-white">Purchase</button>
+                    </div>
+                    <div><img src="images/carousel/bike1.png" class="w-[400px] flex-1" /></div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- carousel 2 -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="flex gap-20 flex-col lg:flex-row p-4">
+                    <div class="space-y-7 flex-1">
+                        <h2 class="text-6xl font-bold">
+                            Ride-on R15 V4
+                            <br>
+                            with Smile
+                        </h2>
+                        <p class="text-light-black">Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <button class="btn bg-bike-primary text-white">Purchase</button>
+                    </div>
+                    <div><img src="images/carousel/bike2.png" class="w-[400px] flex-1" /></div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- carousel 3 -->
+        <div id="slide2" class="carousel-item relative w-full">
+            <div class="flex gap-20 flex-col lg:flex-row p-4">
+                <div class="space-y-7 flex-1">
+                    <h2 class="text-6xl font-bold">
+                        Ride-on R15 V4
+                        <br>
+                        with Smile
+                    </h2>
+                    <p class="text-light-black">Amet minim mollit non deserunt ullamco
+                        est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    <button class="btn bg-bike-primary text-white">Purchase</button>
+                </div>
+                <div><img src="images/carousel/bike3.png" class="w-[400px] flex-1" /></div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+        </div>
+            <!-- carousel 4 -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="flex gap-20 flex-col lg:flex-row p-4">
+                    <div class="space-y-7 flex-1">
+                        <h2 class="text-6xl font-bold">
+                            Ride-on R15 V4
+                            <br>
+                            with Smile
+                        </h2>
+                        <p class="text-light-black">Amet minim mollit non deserunt ullamco
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <button class="btn bg-bike-primary text-white">Purchase</button>
+                    </div>
+                    <div><img src="images/carousel/bike4.png" class="w-[400px] flex-1" /></div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        <!-- slider or carousel end -->
     </header>
-    <main></main>
+    <main class="md:container md:mx-auto"></main>
     <footer></footer>
 </body>
 
