@@ -118,7 +118,7 @@
                     </ul>
                 </div>
                 <div class="navbar-end w-auto">
-                    <a class="btn bg-bike-primary text-white">Login</a>
+                    <a href="login-page.html" class="btn bg-bike-primary text-white">Login</a>
                 </div>
             </div>
             <!-- navigation with daisy ui end -->
@@ -221,7 +221,7 @@
     <main class="md:container md:mx-auto">
         <section>
             <!-- featured bike start -->
-            <h3 class="md:text-5xl text-3xl font-semibold text-center my-2">Fetured Bikes In This Year</h3>
+            <h3 class="md:text-5xl text-3xl font-semibold text-center mb-2 mt-5">Fetured Bikes In This Year</h3>
             <p class="text-bike-primary text-center font-semibold mb-12">Best bike collection</p>
             <div class="flex justify-around flex-col md:flex-row items-center gap-4">
                 <div class="cursor-pointer"><img src="images/others/feature-bike.png" alt=""></div>
@@ -434,28 +434,29 @@
         </section>
         <!-- FAQ end -->
     </main>
-    <footer class="footer p-10 bg-neutral text-neutral-content">
-        <div class="flex flex-col md:flex-row md:justify-around">
-            <div class="space-y-5">
-                <nav class="flex gap-5 ">
-                    <h6 class="link link-hover">Download Now</h6>
-                    <h6 class="link link-hover">License</h6>
-                </nav>
-                <nav class="flex gap-5">
-                    <h6 class="link link-hover">About</h6>
-                    <h6 class="link link-hover">Features</h6>
-                    <h6 class="link link-hover">Pricing</h6>
-                    <h6 class="link link-hover">Careers</h6>
-                    <h6 class="link link-hover">Help</h6>
-                    <h6 class="link link-hover">Privacy Policy</h6>
-                </nav>
+    <footer class="footer p-10 mt-10 bg-neutral text-neutral-content">
+        <aside class="mt-10">
+
+            <div class="flex gap-5">
+                <p>Download Now</p>
+                <p>License</p>
             </div>
-            <div>
-                <h4 class="font-medium">Get the App</h4>
-                
-                <div></div>
+            <div class="flex gap-5">
+                <p>About</p>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>Careers</p>
+                <p>Help</p>
+                <p>Privacy Policy</p>
             </div>
-        </div>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Get the App</h6>
+            <div class="grid grid-cols-1 gap-4">
+                <a><img src="images/others/ios.png" alt=""></a>
+                <a><img src="./images/others/android.png" alt=""></a>
+            </div>
+        </nav>
     </footer>
 </body>
 
